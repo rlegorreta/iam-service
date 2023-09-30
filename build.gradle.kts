@@ -46,10 +46,9 @@ extra["ailegorreta-kit-version"] = "2.0.0"
 dependencies {
 	implementation("org.springframework.cloud:spring-cloud-starter-config")
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
-	implementation("org.springframework.boot:spring-boot-starter-web")
-	// ^ do not use spring-boot-starter-security because we use reactive resource server. Instead, use starter-web
+	implementation("org.springframework.boot:spring-boot-starter-webflux")
+	// ^ do not use spring-boot-starter-security because we use reactive resource server. Instead, use starter-webflux
 	// see: https://stackoverflow.com/questions/76217964/the-bean-springsecurityfilterchain-defined-in-class-path-resource-could-not-be
-	// implementation("org.springframework.boot:spring-boot-starter-webflux")		// Reactive version
 
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
 	implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")

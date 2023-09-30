@@ -22,7 +22,6 @@
  */
 package com.ailegorreta.iamservice.model
 
-import com.fasterxml.jackson.annotation.JsonIgnore
 import com.fasterxml.jackson.annotation.JsonProperty
 import org.springframework.data.annotation.LastModifiedDate
 import org.springframework.data.neo4j.core.schema.*
@@ -53,7 +52,7 @@ import java.time.LocalDateTime
  *
  */
 @Node("Facultad")
-data class Facultad (@Id @GeneratedValue @JsonIgnore var id: Long? = null,
+data class Facultad (@Id @GeneratedValue                        var id: Long? = null,
                      @Property(name = "nombre") 			    var nombre: String,
                      @Property(name = "descripcion") 	    	var descripcion: String?,
                      @Property(name = "tipo")			    	var tipo:  String,

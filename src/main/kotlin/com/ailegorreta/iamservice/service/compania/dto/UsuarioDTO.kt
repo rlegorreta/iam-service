@@ -38,7 +38,7 @@ import com.ailegorreta.iamservice.model.Usuario
  * @project : iam-server-repo
  * @date September 2023
  */
-@JsonIgnoreProperties(value = arrayOf("sinFacultades", "extraFacultades","perfil"))
+@JsonIgnoreProperties(value = ["sinFacultades", "extraFacultades", "perfil"])
 data class UsuarioDTO @JvmOverloads constructor (val id : Long? = null,
                                                  val idUsuario: Long,
                                                  val nombreUsuario: String,
